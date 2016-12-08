@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WMo-Wq-Wkj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Patch Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="JSPatchController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETK-D0-Ydd">
+                                <rect key="frame" x="133" y="319" width="109" height="30"/>
+                                <state key="normal" title="JS代码推出页面"/>
+                                <connections>
+                                    <action selector="pushJSViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ha5-He-jyb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPm-BQ-NM6">
+                                <rect key="frame" x="235" y="94" width="80" height="32"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="H1g-S3-sPS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="更新JS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateJS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8b-gJ-sms"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqk-05-h4a">
+                                <rect key="frame" x="235" y="159" width="80" height="32"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="PkM-H1-R8n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="删除JS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeJs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ilg-B3-wNM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oPm-BQ-NM6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="6UF-JJ-U8a"/>
+                            <constraint firstItem="ETK-D0-Ydd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Msu-UC-Us5"/>
+                            <constraint firstItem="zqk-05-h4a" firstAttribute="top" secondItem="oPm-BQ-NM6" secondAttribute="bottom" constant="33" id="N4f-2b-LMz"/>
+                            <constraint firstItem="zqk-05-h4a" firstAttribute="leading" secondItem="oPm-BQ-NM6" secondAttribute="leading" id="ctd-Uc-qgP"/>
+                            <constraint firstItem="ETK-D0-Ydd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="egX-zs-sPP"/>
+                            <constraint firstAttribute="trailing" secondItem="oPm-BQ-NM6" secondAttribute="trailing" constant="60" id="o5D-0U-fCg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b19-m2-lpK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="30"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="00Q-yp-Tos">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="fjB-MU-kz0" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XNa-MB-Iyo"/>
+                        <viewControllerLayoutGuide type="bottom" id="W5V-si-XKc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZAl-vs-Hlh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是在StoryBoard上写的label的文字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6f-OY-STL">
+                                <rect key="frame" x="38" y="174" width="300" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="c3d-B1-sDv"/>
+                                    <constraint firstAttribute="height" constant="320" id="e6u-Kq-PxF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g6f-OY-STL" firstAttribute="centerY" secondItem="ZAl-vs-Hlh" secondAttribute="centerY" id="bZP-YP-Hr0"/>
+                            <constraint firstItem="g6f-OY-STL" firstAttribute="centerX" secondItem="ZAl-vs-Hlh" secondAttribute="centerX" id="ueM-wp-v7u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="g6f-OY-STL" id="d8W-3I-nW1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zf8-ZP-c4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="40.929535232383813"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DdT-Lm-WKQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WMo-Wq-Wkj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iIn-o8-PZT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HnX-7j-4ht"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZqO-pl-hDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="40.929535232383813"/>
+        </scene>
+    </scenes>
+</document>
