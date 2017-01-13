@@ -72,8 +72,8 @@
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSMutableURLRequest *mutableRequest = [request mutableCopy];
-    [mutableRequest addValue:@"1b622283e66139a1dc107c5c81befc55" forHTTPHeaderField:@"X-Bmob-Application-Id"];
-    [mutableRequest addValue:@"faf2cab2127a75393d127819d726bb86" forHTTPHeaderField:@"X-Bmob-REST-API-Key"];
+    [mutableRequest addValue:@"" forHTTPHeaderField:@"X-Bmob-Application-Id"];
+    [mutableRequest addValue:@"" forHTTPHeaderField:@"X-Bmob-REST-API-Key"];
     request = [mutableRequest copy];
     
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];

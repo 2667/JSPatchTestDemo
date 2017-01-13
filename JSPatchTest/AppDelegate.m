@@ -27,17 +27,43 @@
         [JPEngine evaluateScript:script];
     }
     
-    
-    
-    /*
-    [JPEngine startEngine];
-    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"JSFile" ofType:@"js"];
-    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
-    [JPEngine evaluateScript:script];
-    */
-    
     return YES;
 }
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    
+    [HotFixManager checkUpdateCompleteHandle:^(BOOL status, NSString *response, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!status){
+                if (!error) {
+                    NSLog(@"没有更新");
+                } else {
+                    NSLog(@"%@", error.userInfo);
+                }
+                return ;
+            }
+            NSLog(@"Hotfix文件更新成功");
+            
+            
+        });
+    }];
+    
+}
+
+
+/*
+ [JPEngine startEngine];
+ NSString *script = [NSString stringWithContentsOfFile:response encoding:NSUTF8StringEncoding error:nil];
+ [JPEngine evaluateScript:script];
+ */
+
+
+/*
+ [JPEngine startEngine];
+ NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"JSFile" ofType:@"js"];
+ NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+ [JPEngine evaluateScript:script];
+ */
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -53,30 +79,6 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    
-    [HotFixManager checkUpdateCompleteHandle:^(BOOL status, NSString *response, NSError *error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (!status){
-                if (!error) {
-                    NSLog(@"没有更新");
-                } else {
-                    NSLog(@"%@", error.userInfo);
-                }
-                return ;
-            }
-            NSLog(@"Hotfix文件更新成功");
-            [JPEngine startEngine];
-            NSString *script = [NSString stringWithContentsOfFile:response encoding:NSUTF8StringEncoding error:nil];
-            [JPEngine evaluateScript:script];
-            
-        });
-    }];
-   
 }
 
 

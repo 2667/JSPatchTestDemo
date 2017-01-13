@@ -26,7 +26,6 @@
 		23065DB21DF69C650055DF7B /* JSPatchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPatchController.m; sourceTree = "<group>"; };
 		23065DB61DF69DB90055DF7B /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		23065DB71DF69DB90055DF7B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		23065DBA1DF790BD0055DF7B /* ad.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ad.mp4; sourceTree = "<group>"; };
 		23065DBB1DF7A0EA0055DF7B /* HotFixManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotFixManager.h; sourceTree = "<group>"; };
 		23065DBC1DF7A0EA0055DF7B /* HotFixManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotFixManager.m; sourceTree = "<group>"; };
 		232D68491DF66B1D00DDCF68 /* JSPatchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSPatchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +85,6 @@
 				23065DB21DF69C650055DF7B /* JSPatchController.m */,
 				23065DB61DF69DB90055DF7B /* SecondViewController.h */,
 				23065DB71DF69DB90055DF7B /* SecondViewController.m */,
-				23065DBA1DF790BD0055DF7B /* ad.mp4 */,
 				232D68551DF66B1D00DDCF68 /* Main.storyboard */,
 				232D68581DF66B1D00DDCF68 /* Assets.xcassets */,
 				232D685A1DF66B1D00DDCF68 /* LaunchScreen.storyboard */,

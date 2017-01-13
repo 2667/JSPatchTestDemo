@@ -23,13 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ad" ofType:@"mp4"];
-    NSLog(@"%@",filePath);
     
 }
 
 - (IBAction)pushJSViewController:(UIButton *)sender {
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
 
 }
 
